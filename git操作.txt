@@ -1,0 +1,81 @@
+$ git config --global user.name "别文帅"
+$ git config --global user.email 714872946@qq.com
+
+
+
+token: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
+
+git 操作大全
+
+git init  新建一个本地仓库
+touch test.txt  新增一个test.txt文件
+git status   查看当前状态
+
+git add test.txt 将test.txt文件加入缓存队列
+
+git commit -am '备注信息'  将缓存队列提交到仓库
+
+git branch v2  新建分支v2
+git branch -a 获取分支情况
+git fetch 获取所有分支
+
+
+
+
+git checkout v2  切换到v2
+
+### 将本地
+git remote add origin  https://github.com/biews/gitTest.git
+
+git push -u origin master
+
+###输入 账户名 714872946@qq.com  密码 填写 token 
+
+###拉项目
+git clone https://github.com/biews/gitTest.git
+
+
+
+
+
+
+配置账户
+git config --global user.name “your_username” #设置用户名
+ 
+git config --global user.email “your_registered_github_Email” #设置邮箱地址
+ 
+ 
+git init          #在当前目录创建一个本地仓库
+git status        #查看状态
+git add app1.py   #将app.py添加到缓存
+git add .         #将所有文件添加到缓存，如果要忽略上传某些文件，新建个.gitignore 文件，在里面加上你要忽略的文件和文件夹   如：log.txt     文件夹 /dir1
+ 
+git rm --cached 文件名   将文件从缓存中删除
+ 
+git commit -m '备注信息'  #上传本地仓库
+ 
+git branch v2   #创建分支v2
+git checkout v2  #切换分支
+ 
+git merge v2     #先切换到master，再输这个命令，合并分支
+ 
+ 
+上传数据到远程仓库
+现在github新建一个仓库，地址 https://github.com/NebulaTheus/myapp.git
+如果本地数据没有上传本地仓库，要先上传
+git remote add origin https://github.com/NebulaTheus/myapp.git
+git push -u origin master
+ 
+远程仓库拷贝到本地
+git clone 仓库地址   
+git pull      #将最新的远程仓库同步到本地
+
+
+
+
+###########
+unable to access '': Unknown SSL protocol error in connection to github.com:443
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
